@@ -3,7 +3,7 @@
 angular.module('app')
 
   .service('WeatherService', function ($http, $q) {
-    // let town = this.city;
+    //  let town = this.city;
     let key = '82eec39816078d51bc7412103fbd8a91';
 
     const API_URL = `http://api.openweathermap.org/data/2.5/weather?q=`

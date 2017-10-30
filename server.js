@@ -3,11 +3,15 @@
 // modules =================================================
 const express = require('express');
 const bodyParser = require('body-parser');
+<<<<<<< HEAD
 
 // const api = require('./server/routes');
 
+=======
+>>>>>>> 01712d0ddd3e97e8d80783a1690fdbf8d38dd5d9
 // create the express app object
 const app = express();
+const unirest = require('unirest');
 
 // set our port
 const port = process.env.PORT || 3000;
@@ -36,8 +40,11 @@ app.use((err, req, res, next) => {
 });
 
 // configure our routes
+<<<<<<< HEAD
 /* app.use('/weather', api(app));
 app.use('/webcams', api(app)); */
+=======
+>>>>>>> 01712d0ddd3e97e8d80783a1690fdbf8d38dd5d9
 
 // start app ===============================================
 // startup our app
