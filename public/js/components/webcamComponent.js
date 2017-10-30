@@ -8,7 +8,7 @@ angular.module('app')
       this.$onInit = () => {
         $log.info('Webcam component initialized');
         WebcamsService.getWebcam().then((webcams) => {
-          this.webcam = webcams;
+          this.webcam = webcams[0].id;
           console.log(this.webcam);
         }).catch((error) => {
           this.error = error;
