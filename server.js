@@ -3,12 +3,9 @@
 // modules =================================================
 const express = require('express');
 const bodyParser = require('body-parser');
-
-// const api = require('./server/routes');
-// const db = require('./server/models');
-
 // create the express app object
 const app = express();
+const unirest = require('unirest');
 
 // set our port
 const port = process.env.PORT || 3000;
@@ -37,7 +34,6 @@ app.use((err, req, res, next) => {
 });
 
 // configure our routes
-// app.use('/messages', api(app));
 
 // start app ===============================================
 // startup our app
