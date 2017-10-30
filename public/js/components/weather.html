@@ -1,0 +1,31 @@
+<div class="weather-container">
+  <div class="weather">
+    <div class="alert alert-danger" ng-show="$ctrl.error">
+      {{$ctrl.error}}
+    </div>
+
+    <div class="weather">
+
+        <div class="town">
+            <div class="form-group">
+              <label>Entrez une ville :</label>
+              <input class="form-control" ng-model="city" />
+            </div>
+            <button class="btn btn-default" ng-click="$ctrl.getMeteo(city)">
+              Poster
+            </button>
+          </div>
+
+      <div class="content">
+        Conditions : {{$ctrl.weather.weather[0].description.toUpperCase()}}, {{$ctrl.weather.main.temp}}°C
+        <br>
+        Temp min: {{$ctrl.weather.main.temp_min}}°C
+        <br>
+        Temp max: {{$ctrl.weather.main.temp_max}}°C
+        <br>
+        <img ng-src="{{$ctrl.weatherImg}}" alt="Conditions météo">
+      </div>
+
+    </div>
+  </div>
+</div>

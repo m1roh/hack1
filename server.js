@@ -5,7 +5,6 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 // const api = require('./server/routes');
-// const db = require('./server/models');
 
 // create the express app object
 const app = express();
@@ -37,7 +36,8 @@ app.use((err, req, res, next) => {
 });
 
 // configure our routes
-// app.use('/messages', api(app));
+/* app.use('/weather', api(app));
+app.use('/webcams', api(app)); */
 
 // start app ===============================================
 // startup our app
