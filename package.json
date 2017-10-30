@@ -1,0 +1,26 @@
+{
+  "name": "hack1",
+  "version": "1.0.0",
+  "description": "First Wild Code School Hackaton",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/m1roh/hack1.git"
+  },
+  "author": "brainlulz and m1roh",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/m1roh/hack1/issues"
+  },
+  "homepage": "https://github.com/m1roh/hack1#readme",
+  "dependencies": {
+    "angular": "^1.6.6",
+    "body-parser": "^1.18.2",
+    "bootstrap": "^3.3.7",
+    "express": "^4.16.2",
+    "unirest": "^0.5.1"
+  }
+}
