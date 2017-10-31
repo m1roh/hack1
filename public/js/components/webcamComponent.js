@@ -4,12 +4,12 @@ angular.module('app')
 
     templateUrl: 'js/components/webcamComponent.html',
 
-    controller: function (WebcamsService, $log) {
+    controller: function (WebcamsService, $log, $sce) {
       this.$onInit = () => {
         $log.info('Webcam component initialized');
         WebcamsService.getWebcam().then((webcams) => {
-          this.webcam = webcams[0].id;
-          console.log(this.webcam);
+          this.webcams = webcams;
+          console.log(this.webcams);
         }).catch((error) => {
           this.error = error;
         });

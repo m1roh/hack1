@@ -5,7 +5,7 @@ angular.module('app')
 
   .service('WebcamsService', function ($http, $q) {
 
-    const API_URL = ('https://webcamstravel.p.mashape.com/webcams/list/country=FR?lang=en&show=webcams%3Aimage%2Clocation')
+    const API_URL = ('https://webcamstravel.p.mashape.com/webcams/list/country=FR?lang=en&show=webcams%3Aimage%2Clocation%2Curl')
     /**
      * Get all webcams from the server
      */
