@@ -1,5 +1,4 @@
 body {
-  background-image: url(../imgs/fondbleu.jpg);
   width: 100%;
 }
 
@@ -22,4 +21,81 @@ body {
 .logo {
   width: 30px;
   height: 30px;
+}
+
+.sunnybg{
+  width: 100%;
+  height: 100%;
+  background-image: url(../imgs/sunny.jpg);
+}
+
+.nuagesol{
+  width: auto;
+  height: auto;
+  background-image: url(../imgs/nuage-soleil.jpg)
+}
+
+.nuage{
+  width: auto;
+  height: auto;
+  background-image: url(../imgs/nuage.jpg)
+}
+
+.rain{
+  width: auto;
+  height: auto;
+  background-image: url(../imgs/rain.jpg)
+}
+
+.orageeclaire{
+  width: auto;
+  height: auto;
+  background-image: url(../imgs/orageeclaire.jpg)
+}
+
+.neige{
+  width: auto;
+  height: auto;
+  background-image: url(../imgs/neige.jpg)
+}
+
+.fog{
+  width: auto;
+  height: auto;
+  background-image: url(../imgs/fog.jpg)
+}
+
+.nigth{
+  width: auto;
+  height: auto;
+  background-image: url(../imgs/nigth.jpg)
+}
+
+.nigthcloud{
+  width: auto;
+  height: auto;
+  background-image: url(../imgs/nigth-clouds.jpg)
+}
+.nigthrain{
+  width: auto;
+  height: auto;
+  background-image: url(../imgs/nigth-rain.jpg)
+}
+
+.nigthstorm{
+  width: auto;
+  height: auto;
+  background-image: url(../imgs/nigth-storm.jpg)
+}
+
+.nigthsnow{
+  width: auto;
+  height: auto;
+  background-image: url(../imgs/nigth-snow.jpg)
+}
+
+.nigthfog{
+  width: auto;
+  height: auto;
+  background-image: url(../imgs/nigth-fog.jpg)
 }

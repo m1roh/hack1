@@ -11,6 +11,7 @@ angular.module('app')
       /**
        * Component controller init
        */
+      let body = angular.element( document.querySelector( 'body' ) );
       $scope.city = this.city;
       this.$onInit = () => {
         $log.info('Weather component initialized');
@@ -41,75 +42,77 @@ angular.module('app')
             case '01d':
               this.weatherImg = 'imgs/soleil.gif';
               this.weatherLogo = 'imgs/soleil.png';
-              body.style.backgroundImage = "url('imgs/sunny.jpg')";
+              body.addClass('sunnybg');
               break;
             case '02d':
               this.weatherImg = 'imgs/nuage_soleil.gif';
               this.weatherLogo = 'imgs/nuage_soleil.png';
-              body.style.backgroundImage = "url('imgs/nuage-soleil.jpg')";
+              body.addClass('nuagesol');
               break;
             case '03d':
             case '04d':
               this.weatherImg = 'imgs/nuages.gif';
                this.weatherLogo ='imgs/nuages.png';
-               body.style.backgroundImage = "url('imgs/nuage.jpg')";
+               body.addClass('nuage');
               break;
             case '09d':
             case '10d':
               this.weatherImg = 'imgs/pluie.gif';
              this.weatherLogo = 'imgs/pluie.png';
-             body.style.backgroundImage = "url('imgs/rain.jpg')";
+             body.addClass('rain');
               break;
             case '11d':
               this.weatherImg = 'imgs/orage.gif';
             this.weatherLogo = 'imgs/orage.png';
-            body.style.backgroundImage = "url('imgs/orageeclaire.jpg')";
+            body.addClass('orageeclaire');
               break;
             case '13d':
               this.weatherImg = 'imgs/neige.gif';
               this.weatherLogo = 'imgs/neige.png';
-              body.style.backgroundImage = "url('imgs/snow.jpg')";
+              body.addClass('neige');
               break;
             case '50d':
               this.weatherImg = 'imgs/brume.gif';
               this.weatherLogo = 'imgs/brume.png';
               body.style.backgroundImage = "url('imgs/fog.jpg')";
+              body.addClass('fog');
               break;
             case '01n':
               this.weatherImg = 'imgs/lune.gif';
               this.weatherLogo = 'imgs/nuit.png';
-              body.style.backgroundImage = "url('imgs/night.jpg')";
+              body.addClass('night');
               break;
             case '02n':
             case '03n':
               this.weatherImg = 'imgs/lune_nuages.gif';
               this.weatherLogo = 'imgs/nuit.png';
-              body.style.backgroundImage = "url('imgs/night-clouds.jpg')";
+              body.addClass('nigthcloud');
               break;
             case '09n':
             case '10n':
               this.weatherImg = 'imgs/lune_pluie.gif'
               this.weatherLogo = 'imgs/nuit.png';
-              body.style.backgroundImage = "url('imgs/night-rain.png')";
+              body.addClass('nightrain');
               break;
             case '11n':
               this.weatherImg = 'imgs/lune_orage.gif';
               this.weatherLogo = 'imgs/nuit.png';
-              body.style.backgroundImage = "url('imgs/night-storm.jpg')";
+              body.addClass('nightstorm');
               break;
             case '13n':
               this.weatherImg = 'imgs/lune_neige.gif';
               this.weatherLogo = 'imgs/nuit.png';
               body.style.backgroundImage = "url('imgs/night-snow.jpg')";
+              body.addClass('nightsnow');
               break;
             case '50n':
               this.weatherImg = 'imgs/lune_brume.gif';
               this.weatherLogo = 'imgs/nuit.gif';
-              body.style.backgroundImage = "url('imgs/night-fog.jpg')";
+              body.addClass('nightfog');
               break;
             default:
-              this.weatherImg = 'imgs/logo_meteo.png';
-              this.weatherLogo = 'imgs/neutre.png';
+              this.weatherImg = 'imgs/logo.png';
+              this.weatherLogo = 'imgs/logo.png';
               break;
           }
 
