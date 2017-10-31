@@ -46,6 +46,7 @@ angular.module('app')
               this.weatherImg = 'imgs/soleil.gif';
               this.weatherLogo = 'imgs/soleil.png';
               body.addClass('sunnybg');
+              this.citation = 'L\'ardeur du soleil fait mieux apprécier le plaisir d\'être à l\'ombre.'
               break;
             case '02d':
               this.weatherImg = 'imgs/nuage_soleil.gif';
@@ -57,6 +58,7 @@ angular.module('app')
               this.weatherImg = 'imgs/nuages.gif';
                this.weatherLogo ='imgs/nuages.png';
                body.addClass('nuage');
+               this.citation = 'On peut avoir la tête bien sur les épaules tout en restant dans les nuages.'
               break;
             case '09d':
             case '10d':

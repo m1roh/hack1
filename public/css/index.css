@@ -31,15 +31,24 @@ body {
 
 body {
   text-align: center;
-  color: wheat;
+  color: cadetblue;
+}
+
+a {
+  text-decoration: none;
+  color: cyan;
 }
 
 .red {
-  color: orangered;
+  color: red;
 }
 
 .blue {
-  color: blue;
+  color: darkblue;
+}
+
+.green {
+  color: greenyellow;
 }
 
 .logo {
@@ -91,7 +100,7 @@ input {
 .neige{
   width: auto;
   height: auto;
-  background-image: url(../imgs/neige.jpg)
+  background-image: url(../imgs/snow.jpg)
 }
 
 .fog{

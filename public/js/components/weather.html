@@ -20,11 +20,12 @@
       <h2>Live Weather in : <span ng-show="!city"><em>entrez une ville dans le champs de recherche</em></span> <span ng-bind="city.toUpperCase()"></span></h2>
 
       <div class="content" ng-show="$ctrl.weather">
-        Conditions : {{$ctrl.weather.weather[0].description.toUpperCase()}}, {{$ctrl.weather.main.temp}}°C
-        <br> Temp min: <span class="blue">{{$ctrl.weather.main.temp_min}}°C</span>
-        <br> Temp max: <span class="red">{{$ctrl.weather.main.temp_max}}°C</span>
-        <br>
+        <h3>Conditions : {{$ctrl.weather.weather[0].description.toUpperCase()}}</h3>
+        <h3>Temp actuelle : <span class="green">{{$ctrl.weather.main.temp}}°C</span></h3>
+        <h3>Temp min: <span class="blue">{{$ctrl.weather.main.temp_min}}°C</span></h3>
+        <h3>Temp max: <span class="red">{{$ctrl.weather.main.temp_max}}°C</span></h3>
         <img class="logo" ng-src="{{$ctrl.weatherImg}}" alt="Conditions météo">
+        <h4><em>{{$ctrl.citation}}</em></h4>
       </div>
     </div>
 
@@ -33,7 +34,7 @@
         <div class="cams col-lg-4 col-xs-8" ng-repeat="webcam in $ctrl.webcams">
           <a name="lkr-timelapse-player" data-id="{{webcam.id}}" data-play="day" href="https://lookr.com/{{webcam.id}}" target="_blank">
             <img ng-src="{{webcam.image.current.preview}}" alt="webcam">
-            {{webcam.title}}
+            <h4>{{webcam.title}}</h4>
           </a>
           <a name="lkr-timelapse-player"
           data-id="1178148742"
