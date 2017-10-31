@@ -7,7 +7,7 @@ angular.module('app')
     let key = '82eec39816078d51bc7412103fbd8a91';
 
     const API_URL = `http://api.openweathermap.org/data/2.5/weather?q=`;
-    let CAM_API_URL = 'https://webcamstravel.p.mashape.com/webcams/list/limit=4/nearby='
+    let CAM_API_URL = 'https://webcamstravel.p.mashape.com/webcams/list/limit=3/nearby='
     let options = '?lang=en&show=webcams%3Aimage%2Clocation%2Curl';
 
     this.getWeather = (city) => {
