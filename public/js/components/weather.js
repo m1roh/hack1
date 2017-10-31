@@ -11,9 +11,10 @@ angular.module('app')
       /**
        * Component controller init
        */
-      let body = angular.element(document.querySelector('body'));
+      
       $scope.city = this.city;
       this.$onInit = () => {
+        this.body = angular.element(document.querySelector('body'));
         $log.info('Weather component initialized');
         $log.info('Webcam component initialized');
         /* WeatherService.getWebcam().then((webcams) => {
@@ -31,41 +32,42 @@ angular.module('app')
           this.error = error;
         }); */
       };
-
+      
       this.getMeteo = (city) => {
         // save the messages list into the controller
         WeatherService.getWeather(city).then((weather) => {
           let weatherImg;
           let weatherLogo;
-          let classes = `'sunnybg', 'nuagesol', 'nuage', 'rain', 'orageeclaire', 'neige', 'fog', 'nigth', 'nigthcloud', 'nightrain', 'nightstorm', 'nightsnow', 'nightfog'`;
-          
-          body.removeClass(classes);
+          this.classes = ['sunnybg', 'nuagesol', 'nuage', 'rain', 'orageeclaire', 'neige', 'fog', 'nigth', 'nigthcloud', 'nightrain', 'nightstorm', 'nightsnow', 'nightfog'];
+          this.body.removeClass(this.classes.join(' '));
+          // body.removeClass(classes);
 
           switch (weather.weather[0].icon) {
-
+            
             case '01d':
               this.weatherImg = 'imgs/soleil.gif';
               this.weatherLogo = 'imgs/soleil.png';
-              body.addClass('sunnybg');
+              this.body.removeClass('sunnybg');
+              this.body.addClass('sunnybg');
               this.citation = 'L\'ardeur du soleil fait mieux apprécier le plaisir d\'être à l\'ombre.'
               break;
             case '02d':
               this.weatherImg = 'imgs/nuage_soleil.gif';
-              this.weatherLogo = 'imgs/nuage_soleil.png';
-              body.addClass('nuagesol');
+              this.weatherLogo = 'imgs/nuage_soleil.png';          
+              this.body.addClass('nuagesol');
               break;
             case '03d':
             case '04d':
               this.weatherImg = 'imgs/nuages.gif';
                this.weatherLogo ='imgs/nuages.png';
-               body.addClass('nuage');
+               this.body.addClass('nuage');
                this.citation = 'On peut avoir la tête bien sur les épaules tout en restant dans les nuages.'
               break;
             case '09d':
             case '10d':
               this.weatherImg = 'imgs/pluie.gif';
               this.weatherLogo = 'imgs/pluie.png';
-              body.addClass('rain');
+              this.body.addClass('rain');
               break;
             case '11d':
               this.weatherImg = 'imgs/orage.gif';
@@ -75,12 +77,12 @@ angular.module('app')
             case '13d':
               this.weatherImg = 'imgs/neige.gif';
               this.weatherLogo = 'imgs/neige.png';
-              body.addClass('neige');
+              this.body.addClass('neige');
               break;
             case '50d':
               this.weatherImg = 'imgs/brume.gif';
               this.weatherLogo = 'imgs/brume.png';
-              body.addClass('fog');
+              this.body.addClass('fog');
               break;
             case '01n':
               this.weatherImg = 'imgs/lune.gif';
@@ -113,13 +115,11 @@ angular.module('app')
             case '50n':
               this.weatherImg = 'imgs/lune_brume.gif';
               this.weatherLogo = 'imgs/nuit.gif';
-              
               body.addClass('nightfog');
               break;
             default:
               this.weatherImg = 'imgs/logo.png';
               this.weatherLogo = 'imgs/logo.png';
-              
               break;
           }
 
