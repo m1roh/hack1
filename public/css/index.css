@@ -9,7 +9,7 @@ body {
   color: #777;
 }
 
-.navbar .navbar-nav {
+/* .navbar .navbar-nav {
   display: inline-block;
   float: none;
   vertical-align: top;
@@ -22,4 +22,41 @@ body {
 .logo {
   width: 30px;
   height: 30px;
+} */
+
+.webcams-container {
+  max-width: 90%;
+  margin-left: 3.5%;
+  margin-bottom: 5%;
+}
+
+body {
+  text-align: center;
+}
+
+input {
+  text-align: center;
+}
+
+.red {
+  color: orangered;
+}
+
+.blue {
+  color: blue;
+}
+
+.logo {
+  margin-top: 2%;
+  margin-bottom: 2%;
+}
+
+input {
+  max-width: 90%;
+  margin-left: 5%;
+}
+
+.glyphicon {
+  font-size: 2em;
+  margin-top: 0.5%;
 }
