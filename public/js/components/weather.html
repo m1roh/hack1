@@ -17,13 +17,13 @@
         </button> -->
       </div>
 
-      <h2>Live Weather in : <span ng-show="!city"><em>entrez une ville dans le champs de recherche</em></span> <span ng-bind="city.toUpperCase()"></span></h2>
+      <h2 >Live Weather in : <span ng-show="!city"><em>entrez une ville dans le champs de recherche</em></span> <span ng-bind="city.toUpperCase()"></span></h2>
 
       <div class="content" ng-show="$ctrl.weather">
         <h3>Conditions : {{$ctrl.weather.weather[0].description.toUpperCase()}}</h3>
-        <h3>Temp actuelle : <span class="green">{{$ctrl.weather.main.temp}}°C</span></h3>
-        <h3>Temp min: <span class="blue">{{$ctrl.weather.main.temp_min}}°C</span></h3>
-        <h3>Temp max: <span class="red">{{$ctrl.weather.main.temp_max}}°C</span></h3>
+        <h3 class="fontsteel">Temp actuelle : <span class="green">{{$ctrl.weather.main.temp}}°C</span></h3>
+        <h3 class="fontsteel">Temp min: <span class="blue">{{$ctrl.weather.main.temp_min}}°C</span></h3>
+        <h3 class="fontsteel">Temp max: <span class="red">{{$ctrl.weather.main.temp_max}}°C</span></h3>
         <img class="logo" ng-src="{{$ctrl.weatherImg}}" alt="Conditions météo">
         <h4><em>{{$ctrl.citation}}</em></h4>
       </div>
