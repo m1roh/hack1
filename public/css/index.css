@@ -44,10 +44,7 @@ body {
   text-align: center;
   width: 100%;
   background-image: url(../imgs/geometricbg.jpg);
-  color:#597A9B;
-  font-size: 2em;
-  font-weight: 800;
-  -webkit-text-stroke: 1px darkkhaki;
+
 }
 
 a {
@@ -91,70 +88,82 @@ input {
 .nuagesol{
   width: auto;
   height: auto;
-  background-image: url(../imgs/nuage-soleil.jpg)
+  background-image: url(../imgs/nuage-soleil.jpg);
+  color: #D8D4CE;
 }
 
 .nuage{
   width: auto;
   height: auto;
-  background-image: url(../imgs/nuage.jpg)
+  background-image: url(../imgs/nuage.jpg);
+  color: #D8D4CE;
 }
 
 .rain{
   width: auto;
   height: auto;
-  background-image: url(../imgs/rain.jpg)
+  background-image: url(../imgs/rain.jpg);
+  color: #D8D4CE;
 }
 
 .orageeclaire{
   width: auto;
   height: auto;
-  background-image: url(../imgs/orageeclaire.jpg)
+  background-image: url(../imgs/orageeclaire.jpg);
+  color: #D8D4CE;
 }
 
 .neige{
   width: auto;
   height: auto;
-  background-image: url(../imgs/snow.jpg)
+  background-image: url(../imgs/snow.jpg);
+  color:#597A9B;
 }
 
 .fog{
   background-image: url(../imgs/fog.jpg);
+  color:#597A9B;;
 }
 
 .night{
   width: auto;
   height: auto;
-  background-image: url(../imgs/night.jpg)
+  background-image: url(../imgs/night.jpg);
+  color:#D8D4CE;
 }
 
 .nightcloud{
   width: auto;
   height: auto;
-  background-image: url(../imgs/night-clouds.jpg)
+  background-image: url(../imgs/night-clouds.jpg);
+  color:#D8D4CE
 }
 .nightrain{
   width: auto;
   height: auto;
-  background-image: url(../imgs/night-rain.jpg)
+  background-image: url(../imgs/night-rain.jpg);
+  color:#D8D4CE
 }
 
 .nightstorm{
   width: auto;
   height: auto;
-  background-image: url(../imgs/night-storm.jpg)
+  background-image: url(../imgs/night-storm.jpg);
+  color:#D8D4CE
 }
 
 .nightsnow{
   width: auto;
   height: auto;
-  background-image: url(../imgs/night-snow.jpg)
+  background-image: url(../imgs/night-snow.jpg);
+  color:#D8D4CE
 }
 
 .nightfog{
   width: auto;
   height: auto;
-  background-image: url(../imgs/night-fog.jpg)
+  background-image: url(../imgs/night-fog.jpg);
+  color: #D8D4CE;
 }
 
 @media screen and (max-width: 750px){
