@@ -2,10 +2,11 @@
   <div class="stats">
     <span ng-if="$ctrl.webcam.length > 0">{{$ctrl.webcam.length}} webcam(s)</span>
   </div>
-  
-  <!-- <iframe width="100%" name="lkr-timelapse-player-iframe" frameborder="0" allowfullscreen="true" ng-src="https://api.lookr.com/embed/player/{{'$ctrl.webcam.id'}}/day?autoresize=1&amp;referrer=http%3A%2F%2Flocalhost%3A3000%2F" style="border: none;" height="405"></iframe> -->
-  <!-- 
-  {{$ctrl.webcams}} -->
 </div>
+<div ng-repeat="webcam in $ctrl.webcam">
+  <a name="lkr-timelapse-player" data-id="{{webcam.id}}" data-play="day" href="https://lookr.com/{{webcam.id}}" target="_blank">
+    Nom de la ville
+  </a>
 
+</div>
 <script async type="text/javascript" src="https://api.lookr.com/embed/script/player.js"></script>
