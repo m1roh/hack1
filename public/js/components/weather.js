@@ -38,41 +38,41 @@ angular.module('app')
 
           switch (weather.weather[0].icon) {
             case '01d':
-              weatherImg.setAttribute('src', 'imgs/soleil.gif');
-              weatherLogo.setAttribute('src', 'imgs/soleil.png');
-              body.style.background = '#EECB6A';
+              this.weatherImg = 'imgs/soleil.gif';
+              this.weatherLogo = 'imgs/soleil.png';
+/*               body.style.background = '#EECB6A'; */
               break;
             case '02d':
-              weatherImg.setAttribute('src', 'imgs/nuage_soleil.gif');
-              weatherLogo.setAttribute('src', 'imgs/nuage_soleil.png');
-              body.style.background = '#CDAF79';
+              this.weatherImg = 'imgs/nuage_soleil.gi';
+              this.weatherLogo = 'imgs/nuage_soleil.png';
+              /* body.style.background = '#CDAF79'; */
               break;
             case '03d':
             case '04d':
-              weatherImg.setAttribute('src', 'imgs/nuages.gif');
-              weatherLogo.setAttribute('src', 'imgs/nuages.png');
-              body.style.background = '#809EAC';
+              this.weatherImg = 'imgs/nuages.gif';
+               this.weatherLogo ='imgs/nuages.png';
+          /*     body.style.background = '#809EAC'; */
               break;
             case '09d':
             case '10d':
-              weatherImg.setAttribute('src', 'imgs/pluie.gif');
-              weatherLogo.setAttribute('src', 'imgs/pluie.png');
-              body.style.background = '#536978';
+              this.weatherImg = 'imgs/pluie.gif';
+             this.weatherLogo = 'imgs/pluie.png';
+             /*  body.style.background = '#536978'; */
               break;
             case '11d':
-              weatherImg.setAttribute('src', 'imgs/orage.gif');
-              weatherLogo.setAttribute('src', 'imgs/orage.png');
-              body.style.background = '#5E7C7B';
+              this.weatherImg = 'imgs/orage.gif';
+            this.weatherLogo = 'imgs/orage.png';
+             /*  body.style.background = '#5E7C7B'; */
               break;
             case '13d':
-              weatherImg.setAttribute('src', 'imgs/neige.gif');
-              weatherLogo.setAttribute('src', 'imgs/neige.png');
-              body.style.background = '#B1C0C8';
+              this.weatherImg = 'imgs/neige.gif';
+              this.weatherLogo = 'imgs/neige.png';
+              /* body.style.background = '#B1C0C8'; */
               break;
             case '50d':
-              weatherImg.setAttribute('src', 'imgs/brume.gif');
-              weatherLogo.setAttribute('src', 'imgs/brume.png');
-              body.style.background = '#DDD8D0';
+              this.weatherImg = 'imgs/brume.gif';
+              this.weatherLogo = 'imgs/brume.png';
+              /* body.style.background = '#DDD8D0'; */
               break;
             case '01n':
               this.weatherImg = 'imgs/lune.gif';
@@ -81,34 +81,34 @@ angular.module('app')
               break;
             case '02n':
             case '03n':
-              weatherImg.setAttribute('src', 'imgs/lune_nuages.gif');
-              weatherLogo.setAttribute('src', 'imgs/nuit.png');
-              body.style.background = '#202D4B';
+              this.weatherImg = 'imgs/lune_nuages.gif';
+              this.weatherLogo = 'imgs/nuit.png';
+              /* body.style.background = '#202D4B'; */
               break;
             case '09n':
             case '10n':
-              weatherImg.setAttribute('src', 'imgs/lune_pluie.gif');
-              weatherLogo.setAttribute('src', 'imgs/nuit.png');
-              body.style.background = '#0A3541';
+              this.weatherImg = 'imgs/lune_pluie.gif'
+              this.weatherLogo = 'imgs/nuit.png';
+             /*  body.style.background = '#0A3541'; */
               break;
             case '11n':
-              weatherImg.setAttribute('src', 'imgs/lune_orage.gif');
-              weatherLogo.setAttribute('src', 'imgs/nuit.png');
-              body.style.background = '#2C2E07';
+              this.weatherImg = 'imgs/lune_orage.gif';
+              this.weatherLogo = 'imgs/nuit.png';
+              /* body.style.background = '#2C2E07'; */
               break;
             case '13n':
-              weatherImg.setAttribute('src', 'imgs/lune_neige.gif');
-              weatherLogo.setAttribute('src', 'imgs/nuit.png');
-              body.style.background = '#4D4D4F';
+              this.weatherImg = 'imgs/lune_neige.gif';
+              this.weatherLogo = 'imgs/nuit.png';
+              /* body.style.background = '#4D4D4F'; */
               break;
             case '50n':
-              weatherImg.setAttribute('src', 'imgs/lune_brume.png');
-              weatherLogo.setAttribute('src', 'imgs/nuit.gif');
-              body.style.background = '#434139';
+              this.weatherImg = 'imgs/lune_brume.gif';
+              this.weatherLogo = 'imgs/nuit.gif';
+              /* body.style.background = '#434139'; */
               break;
             default:
-              weatherImg.setAttribute('src', 'imgs/logo_meteo.png');
-              weatherLogo.setAttribute('src', 'imgs/neutre.png');
+              this.weatherImg = 'imgs/logo_meteo.png';
+              this.weatherLogo = 'imgs/neutre.png';
               break;
           }
 
