@@ -46,6 +46,7 @@ body {
 
 body {
   text-align: center;
+  color: wheat;
 }
 
 .red {
@@ -123,7 +124,7 @@ input {
 .nightcloud{
   width: auto;
   height: auto;
-  background-image: url(../imgs/nigth-clouds.jpg)
+  background-image: url(../imgs/night-clouds.jpg)
 }
 .nightrain{
   width: auto;
@@ -148,3 +149,25 @@ input {
   height: auto;
   background-image: url(../imgs/nigth-fog.jpg)
 }
+<<<<<<< HEAD
+=======
+
+@media screen and (max-width: 750px){
+  body {
+    height: 100%;
+  }
+
+  .webcams-container {
+    margin-top: 5%;
+    margin-bottom: 10%;
+  }
+  .cams {
+    margin-bottom: 2%;
+  }
+
+  .cams img {
+    max-width: 135%;
+    margin-left: 12.5%;
+  }
+}
+>>>>>>> 1512d9b5baeba177a8df8c143ca0bd3a3fb9cb0b

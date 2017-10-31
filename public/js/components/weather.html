@@ -17,7 +17,7 @@
         </button> -->
       </div>
 
-      <h2>Live Weather in : <span ng-show="!city"><em>entrez une ville dans le champs de recherche</em></span> <span ng-bind="city"></span></h2>
+      <h2>Live Weather in : <span ng-show="!city"><em>entrez une ville dans le champs de recherche</em></span> <span ng-bind="city.toUpperCase()"></span></h2>
 
       <div class="content" ng-show="$ctrl.weather">
         Conditions : {{$ctrl.weather.weather[0].description.toUpperCase()}}, {{$ctrl.weather.main.temp}}°C
@@ -30,17 +30,30 @@
 
     <div class="webcams-container row">
       
+<<<<<<< HEAD
         <div class="cams col-lg-3" ng-repeat="webcam in $ctrl.webcams" ng-model="$ctrl.$onChanges">
           <!-- <a class="col-md-3 col-lg-3" name="lkr-timelapse-player" data-id="{{webcam.id}}" data-play="day" href="https://lookr.com/{{webcam.id}}" target="_blank">
             <img ng-src="{{webcam.image.current.preview}}" alt="webcam">
           </a> -->
+=======
+        <div class="cams col-lg-4 col-xs-8" ng-repeat="webcam in $ctrl.webcams">
+          <a name="lkr-timelapse-player" data-id="{{webcam.id}}" data-play="day" href="https://lookr.com/{{webcam.id}}" target="_blank">
+            <img ng-src="{{webcam.image.current.preview}}" alt="webcam">
+            {{webcam.title}}
+          </a>
+>>>>>>> 1512d9b5baeba177a8df8c143ca0bd3a3fb9cb0b
           <a name="lkr-timelapse-player"
           data-id="{{webcam.id}}"
           data-play="day"
+<<<<<<< HEAD
           href="https://lookr.com/{{webcam.id}}"
           target="_blank"
           class="webcamitem">
           Nom de la ville
+=======
+          href="https://lookr.com/1178148742"
+          target="_blank">
+>>>>>>> 1512d9b5baeba177a8df8c143ca0bd3a3fb9cb0b
           </a>
         </div>
       </div>
