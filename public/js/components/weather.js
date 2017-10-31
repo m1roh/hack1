@@ -17,20 +17,6 @@ angular.module('app')
         this.body = angular.element(document.querySelector('body'));
         $log.info('Weather component initialized');
         $log.info('Webcam component initialized');
-        /* WeatherService.getWebcam().then((webcams) => {
-          this.webcams = webcams;
-          console.log(this.webcams);
-        }).catch((error) => {
-          this.error = error;
-        }); */
-
-        // get the messages list
-        /* WeatherService.getWeather(city).then((weather) => {
-          // save the messages list into the controller
-          this.weather = weather;
-        }).catch((error) => {
-          this.error = error;
-        }); */
       };
       
       this.getMeteo = (city) => {
@@ -38,15 +24,9 @@ angular.module('app')
         WeatherService.getWeather(city).then((weather) => {
           let weatherImg;
           let weatherLogo;
-<<<<<<< HEAD
           this.classes = ['sunnybg', 'nuagesol', 'nuage', 'rain', 'orageeclaire', 'neige', 'fog', 'nigth', 'nigthcloud', 'nightrain', 'nightstorm', 'nightsnow', 'nightfog'];
           this.body.removeClass(this.classes.join(' '));
           // body.removeClass(classes);
-=======
-          let classes = `'sunnybg', 'nuagesol', 'nuage', 'rain', 'orageeclaire', 'neige', 'fog', 'night', 'nightcloud', 'nightrain', 'nightstorm', 'nightsnow', 'nightfog'`;
-          
-          body.removeClass(classes);
->>>>>>> 12637064559d0294ddce9325d260089b14165244
 
           switch (weather.weather[0].icon) {
             

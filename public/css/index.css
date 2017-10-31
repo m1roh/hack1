@@ -42,23 +42,16 @@
 
 body {
   text-align: center;
-<<<<<<< HEAD
-  color: cadetblue;
-}
-
-a {
-  text-decoration: none;
-  color: cyan;
-=======
   width: 100%;
   background-image: url(../imgs/geometricbg.jpg);
   color:#597A9B;
   font-size: 2em;
   font-weight: 800;
-  -webkit-text-stroke: 1px black;
-  color: #D8D4CE;
+  -webkit-text-stroke: 1px darkkhaki;
+}
 
->>>>>>> 12637064559d0294ddce9325d260089b14165244
+a {
+  text-decoration: none;
 }
 
 .red {
@@ -66,16 +59,11 @@ a {
 }
 
 .blue {
-<<<<<<< HEAD
-  color: darkblue;
+  color: blue;
 }
 
 .green {
   color: greenyellow;
-=======
-
-  color: blue;
->>>>>>> 12637064559d0294ddce9325d260089b14165244
 }
 
 .logo {
