@@ -32,5 +32,5 @@ angular.module('app')
       });
       return defer.promise;
     };
-
+    
   });

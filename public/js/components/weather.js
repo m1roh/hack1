@@ -11,7 +11,7 @@ angular.module('app')
       /**
        * Component controller init
        */
-      let body = angular.element( document.querySelector( 'body' ) );
+      let body = angular.element(document.querySelector('body'));
       $scope.city = this.city;
       this.$onInit = () => {
         $log.info('Weather component initialized');
@@ -42,6 +42,7 @@ angular.module('app')
           body.removeClass(classes);
 
           switch (weather.weather[0].icon) {
+
             case '01d':
               this.weatherImg = 'imgs/soleil.gif';
               this.weatherLogo = 'imgs/soleil.png';
@@ -63,13 +64,13 @@ angular.module('app')
             case '09d':
             case '10d':
               this.weatherImg = 'imgs/pluie.gif';
-             this.weatherLogo = 'imgs/pluie.png';
-             body.addClass('rain');
+              this.weatherLogo = 'imgs/pluie.png';
+              body.addClass('rain');
               break;
             case '11d':
               this.weatherImg = 'imgs/orage.gif';
-            this.weatherLogo = 'imgs/orage.png';
-            body.addClass('orageeclaire');
+              this.weatherLogo = 'imgs/orage.png';
+              body.addClass('orageeclaire');
               break;
             case '13d':
               this.weatherImg = 'imgs/neige.gif';
@@ -79,7 +80,6 @@ angular.module('app')
             case '50d':
               this.weatherImg = 'imgs/brume.gif';
               this.weatherLogo = 'imgs/brume.png';
-              body.style.backgroundImage = "url('imgs/fog.jpg')";
               body.addClass('fog');
               break;
             case '01n':
@@ -108,17 +108,18 @@ angular.module('app')
             case '13n':
               this.weatherImg = 'imgs/lune_neige.gif';
               this.weatherLogo = 'imgs/nuit.png';
-              body.style.backgroundImage = "url('imgs/night-snow.jpg')";
               body.addClass('nightsnow');
               break;
             case '50n':
               this.weatherImg = 'imgs/lune_brume.gif';
               this.weatherLogo = 'imgs/nuit.gif';
+              
               body.addClass('nightfog');
               break;
             default:
               this.weatherImg = 'imgs/logo.png';
               this.weatherLogo = 'imgs/logo.png';
+              
               break;
           }
 
@@ -127,14 +128,18 @@ angular.module('app')
           this.weather = weather;
         }).then(() => {
           WeatherService.getWebcam(this.weather.coord.lat, this.weather.coord.lon)
-          .then((webcams) => {
-            this.webcams = webcams;
-            console.log(this.webcams);
-          })
+            .then((webcams) => {
+              this.webcams = webcams;
+              console.log(this.webcams);
+            })
         }).catch((error) => {
           this.error = error;
         });
       };
-
+      this.$onChanges = function (changes) {
+        if(this.webcams !=0){
+          console.log(changes);
+        }
+      };
     }
   });
