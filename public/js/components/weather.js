@@ -6,11 +6,12 @@ angular.module('app')
 
     templateUrl: 'js/components/weather.html',
 
-    controller: function (WeatherService, $log) {
+    controller: function (WeatherService, $scope, $log) {
       //let city = this.city;
       /**
        * Component controller init
        */
+      $scope.city = this.city;
       this.$onInit = () => {
         $log.info('Weather component initialized');
         $log.info('Webcam component initialized');
