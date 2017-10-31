@@ -9,7 +9,7 @@
 
 body {
   width: 100%;
-  color:#fff
+  background-image: url(../imgs/geometricbg.jpg)
 }
 
 .footer-bottom {
@@ -54,6 +54,7 @@ body {
 }
 
 .blue {
+}
   color: blue;
 }
 
@@ -149,8 +150,6 @@ input {
   height: auto;
   background-image: url(../imgs/nigth-fog.jpg)
 }
-<<<<<<< HEAD
-=======
 
 @media screen and (max-width: 750px){
   body {
@@ -170,4 +169,3 @@ input {
     margin-left: 12.5%;
   }
 }
->>>>>>> 1512d9b5baeba177a8df8c143ca0bd3a3fb9cb0b
