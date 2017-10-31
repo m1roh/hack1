@@ -9,7 +9,7 @@
       <div class="town">
         <div class="form-group">
           <input class="form-control col-xs-1" ng-model="city" />
-          <a href="#"><span class="glyphicon glyphicon-search"  ng-click="$ctrl.getMeteo(city)"></span></a>
+          <a href="#"><span class="glyphicon glyphicon-search"  ng-click="changements = $ctrl.getMeteo(city); $ctrl.$onChanges"></span></a>
         </div>
 
         <!-- <button class="btn btn-default" ng-click="$ctrl.getMeteo(city)">
@@ -30,21 +30,23 @@
 
     <div class="webcams-container row">
       
-        <div class="cams" ng-repeat="webcam in $ctrl.webcams">
-          <!-- <a class="col-lg-3" name="lkr-timelapse-player" data-id="{{webcam.id}}" data-play="day" href="https://lookr.com/{{webcam.id}}" target="_blank">
+        <div class="cams col-lg-3" ng-repeat="webcam in $ctrl.webcams" ng-model="$ctrl.$onChanges">
+          <!-- <a class="col-md-3 col-lg-3" name="lkr-timelapse-player" data-id="{{webcam.id}}" data-play="day" href="https://lookr.com/{{webcam.id}}" target="_blank">
             <img ng-src="{{webcam.image.current.preview}}" alt="webcam">
           </a> -->
           <a name="lkr-timelapse-player"
           data-id="{{webcam.id}}"
           data-play="day"
           href="https://lookr.com/{{webcam.id}}"
-          target="_blank">
+          target="_blank"
+          class="webcamitem">
           Nom de la ville
           </a>
         </div>
       </div>
-      
-      <script async type="text/javascript" src="js/player.js"></script>
-
+    
   </div>
 </div>
+
+
+<script async type="text/javascript" src="js/player.js"></script>

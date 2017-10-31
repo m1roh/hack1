@@ -1,5 +1,15 @@
+@font-face {
+  font-family: 'steelworsteelworksvintagedemo';
+  src: url('../fonts/steelworks_vintage_demo-webfont.woff2') format('woff2'),
+       url('../fonts/steelworks_vintage_demo-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+
+}
+
 body {
   width: 100%;
+  color:#fff
 }
 
 .footer-bottom {
@@ -8,7 +18,9 @@ body {
   color: #777;
 }
 
-/* .navbar .navbar-nav {
+/* .navbarLive Weather Wild App
+￼
+ .navbar-nav {
   display: inline-block;
   float: none;
   vertical-align: top;
@@ -22,6 +34,9 @@ body {
   width: 30px;
   height: 30px;
 } */
+.fontsteel{
+  font-family: 'steelworsteelworksvintagedemo'
+}
 
 .webcams-container {
   max-width: 90%;
@@ -99,36 +114,36 @@ input {
   background-image: url(../imgs/fog.jpg)
 }
 
-.nigth{
+.night{
   width: auto;
   height: auto;
   background-image: url(../imgs/nigth.jpg)
 }
 
-.nigthcloud{
+.nightcloud{
   width: auto;
   height: auto;
   background-image: url(../imgs/nigth-clouds.jpg)
 }
-.nigthrain{
+.nightrain{
   width: auto;
   height: auto;
   background-image: url(../imgs/nigth-rain.jpg)
 }
 
-.nigthstorm{
+.nightstorm{
   width: auto;
   height: auto;
   background-image: url(../imgs/nigth-storm.jpg)
 }
 
-.nigthsnow{
+.nightsnow{
   width: auto;
   height: auto;
   background-image: url(../imgs/nigth-snow.jpg)
 }
 
-.nigthfog{
+.nightfog{
   width: auto;
   height: auto;
   background-image: url(../imgs/nigth-fog.jpg)

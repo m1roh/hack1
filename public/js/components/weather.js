@@ -11,7 +11,7 @@ angular.module('app')
       /**
        * Component controller init
        */
-      let body = angular.element( document.querySelector( 'body' ) );
+      let body = angular.element(document.querySelector('body'));
       $scope.city = this.city;
       this.$onInit = () => {
         $log.info('Weather component initialized');
@@ -39,49 +39,49 @@ angular.module('app')
           let weatherLogo;
 
           switch (weather.weather[0].icon) {
-            
+
             case '01d':
               this.weatherImg = 'imgs/soleil.gif';
               this.weatherLogo = 'imgs/soleil.png';
-              body.removeClass();
+              body.removeClass('fog', 'rain', 'snow', 'nuagesol', 'nuage');
               body.addClass('sunnybg');
               break;
             case '02d':
               this.weatherImg = 'imgs/nuage_soleil.gif';
               this.weatherLogo = 'imgs/nuage_soleil.png';
-              body.removeClass();
+              body.removeClass('fog');
               body.addClass('nuagesol');
               break;
             case '03d':
             case '04d':
               this.weatherImg = 'imgs/nuages.gif';
-               this.weatherLogo ='imgs/nuages.png';
-               body.removeClass();
-               body.addClass('nuage');
+              this.weatherLogo = 'imgs/nuages.png';
+              body.removeClass(!'nuage');
+              body.addClass('nuage');
               break;
             case '09d':
             case '10d':
               this.weatherImg = 'imgs/pluie.gif';
-             this.weatherLogo = 'imgs/pluie.png';
-             body.removeClass();
-             body.addClass('rain');
+              this.weatherLogo = 'imgs/pluie.png';
+              body.removeClass(!'rain');
+              body.addClass('rain');
               break;
             case '11d':
               this.weatherImg = 'imgs/orage.gif';
-            this.weatherLogo = 'imgs/orage.png';
-            body.removeClass();
-            body.addClass('orageeclaire');
+              this.weatherLogo = 'imgs/orage.png';
+              body.removeClass(!'orageeclaire');
+              body.addClass('orageeclaire');
               break;
             case '13d':
               this.weatherImg = 'imgs/neige.gif';
               this.weatherLogo = 'imgs/neige.png';
-              body.removeClass();
+              body.removeClass(!'neige');
               body.addClass('neige');
               break;
             case '50d':
               this.weatherImg = 'imgs/brume.gif';
               this.weatherLogo = 'imgs/brume.png';
-              body.removeClass();
+              body.removeClass(!'fog');
               body.addClass('fog');
               break;
             case '01n':
@@ -134,14 +134,18 @@ angular.module('app')
           this.weather = weather;
         }).then(() => {
           WeatherService.getWebcam(this.weather.coord.lat, this.weather.coord.lon)
-          .then((webcams) => {
-            this.webcams = webcams;
-            console.log(this.webcams);
-          })
+            .then((webcams) => {
+              this.webcams = webcams;
+              console.log(this.webcams);
+            })
         }).catch((error) => {
           this.error = error;
         });
       };
-
+      this.$onChanges = function (changes) {
+        if(this.webcams !=0){
+          console.log(changes);
+        }
+      };
     }
   });
