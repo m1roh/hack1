@@ -13,6 +13,13 @@ angular.module('app')
        */
       this.$onInit = () => {
         $log.info('Weather component initialized');
+        $log.info('Webcam component initialized');
+        /* WeatherService.getWebcam().then((webcams) => {
+          this.webcams = webcams;
+          console.log(this.webcams);
+        }).catch((error) => {
+          this.error = error;
+        }); */
 
         // get the messages list
         /* WeatherService.getWeather(city).then((weather) => {
@@ -108,6 +115,12 @@ angular.module('app')
           /* this.weatherImg = weatherImg;
           this.weatherLogo = weatherLogo; */
           this.weather = weather;
+        }).then(() => {
+          WeatherService.getWebcam(this.weather.coord.lat, this.weather.coord.lon)
+          .then((webcams) => {
+            this.webcams = webcams;
+            console.log(this.webcams);
+          })
         }).catch((error) => {
           this.error = error;
         });

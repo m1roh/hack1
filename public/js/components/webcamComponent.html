@@ -4,15 +4,9 @@
   </div>
 
   <div class="cams" ng-repeat="webcam in $ctrl.webcams">
-    <!-- <a name="lkr-timelapse-player" data-id="{{webcam.id}}" data-play="day" href="https://lookr.com/{{webcam.id}}" target="_blank">
-      {{webcam.title}}
-    </a> -->
     <a name="lkr-timelapse-player" data-id="{{webcam.id}}" data-play="day" href="https://lookr.com/{{webcam.id}}" target="_blank">
       <img ng-src="{{webcam.image.current.preview}}" alt="webcam">
-    </a><script async type="text/javascript" src="https://api.lookr.com/embed/script/player.js"></script>
-    <!-- <a href="{{webcam.url.current.mobile}}">
-      <img ng-src="{{webcam.image.current.preview}}" alt="webcam">
-    </a> -->
+    </a>
     
   </div>
 </div>

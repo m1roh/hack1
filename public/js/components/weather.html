@@ -6,26 +6,39 @@
 
     <div class="weather">
 
-        <div class="town">
-            <div class="form-group">
-              <label>Entrez une ville :</label>
-              <input class="form-control" ng-model="city" />
-            </div>
-            <button class="btn btn-default" ng-click="$ctrl.getMeteo(city)">
-              Poster
-            </button>
-          </div>
+      <div class="town">
+        <div class="form-group">
+          <label>Entrez une ville :</label>
+          <input class="form-control" ng-model="city" />
+        </div>
+        <button class="btn btn-default" ng-click="$ctrl.getMeteo(city)">
+          Poster
+        </button>
+      </div>
 
       <div class="content">
         Conditions : {{$ctrl.weather.weather[0].description.toUpperCase()}}, {{$ctrl.weather.main.temp}}°C
-        <br>
-        Temp min: {{$ctrl.weather.main.temp_min}}°C
-        <br>
-        Temp max: {{$ctrl.weather.main.temp_max}}°C
+        <br> Temp min: {{$ctrl.weather.main.temp_min}}°C
+        <br> Temp max: {{$ctrl.weather.main.temp_max}}°C
         <br>
         <img ng-src="{{$ctrl.weatherImg}}" alt="Conditions météo">
       </div>
-
     </div>
+
+    <div class="webcams-container">
+        <div class="stats">
+          <span ng-if="$ctrl.webcams.length > 0">{{$ctrl.webcams.length}} webcam(s)</span>
+        </div>
+      
+        <div class="cams" ng-repeat="webcam in $ctrl.webcams">
+          <a name="lkr-timelapse-player" data-id="{{webcam.id}}" data-play="day" href="https://lookr.com/{{webcam.id}}" target="_blank">
+            <img ng-src="{{webcam.image.current.preview}}" alt="webcam">
+          </a>
+          
+        </div>
+      </div>
+      
+      <script async type="text/javascript" src="https://api.lookr.com/embed/script/player.js"></script>
+
   </div>
 </div>
