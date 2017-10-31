@@ -24,7 +24,7 @@ angular.module('app')
         WeatherService.getWeather(city).then((weather) => {
           let weatherImg;
           let weatherLogo;
-          this.classes = ['sunnybg', 'nuagesol', 'nuage', 'rain', 'orageeclaire', 'neige', 'fog', 'nigth', 'nigthcloud', 'nightrain', 'nightstorm', 'nightsnow', 'nightfog'];
+          this.classes = ['sunnybg', 'nuagesol', 'nuage', 'rain', 'orageeclaire', 'neige', 'fog', 'night', 'nightcloud', 'nightrain', 'nightstorm', 'nightsnow', 'nightfog'];
           this.body.removeClass(this.classes.join(' '));
           // body.removeClass(classes);
 
@@ -40,7 +40,7 @@ angular.module('app')
             case '02d':
               this.weatherImg = 'imgs/nuage_soleil.gif';
               this.weatherLogo = 'imgs/nuage_soleil.png';
-              body.addClass('nuagesol');
+              this.body.addClass('nuagesol');
               this.citation= 'N\'oublie pas que chaque nuage, si noir soit-il, a toujours une face ensoleillée, tournée vers le ciel.'
               break;
             case '03d':
@@ -54,31 +54,31 @@ angular.module('app')
             case '10d':
               this.weatherImg = 'imgs/pluie.gif';
               this.weatherLogo = 'imgs/pluie.png';
-              body.addClass('rain');
+              this.body.addClass('rain');
               this.citation = 'Quand la poule s\'épouille, la pluie est bientôt arrivée.'
               break;
             case '11d':
               this.weatherImg = 'imgs/orage.gif';
               this.weatherLogo = 'imgs/orage.png';
-              body.addClass('orageeclaire');
+              this.body.addClass('orageeclaire');
               this.citation = 'C\'est pendant l\'orage qu\'on connaît le pilote.'
               break;
             case '13d':
               this.weatherImg = 'imgs/neige.gif';
               this.weatherLogo = 'imgs/neige.png';
-              body.addClass('neige');
+              this.body.addClass('neige');
               this.citation = 'La neige est à sa hauteur.'
               break;
             case '50d':
               this.weatherImg = 'imgs/brume.gif';
               this.weatherLogo = 'imgs/brume.png';
-              body.addClass('fog');
+              this.body.addClass('fog');
               this.citation = 'Brouillard d\'automne, beau temps nous donne.'
               break;
             case '01n':
               this.weatherImg = 'imgs/lune.gif';
               this.weatherLogo = 'imgs/nuit.png';
-              body.addClass('night');
+              this.body.addClass('night');
               this.citation ='Où va la nuit, le rêve y va.'
               break;
             case '02n':
@@ -86,33 +86,33 @@ angular.module('app')
             case '04n':
               this.weatherImg = 'imgs/lune_nuages.gif';
               this.weatherLogo = 'imgs/nuit.png';
-              body.addClass('nightcloud');
+              this.body.addClass('nightcloud');
               this.citation ='Je veux m\'arracher à cet endroit, à cette réalité, m\'élever haut dans le ciel, comme un nuage et flotter à la dérive en me fondant dans cette nuit d\'été humide jusqu\'à me dissoudre quelque part, loin, par-delà les montagnes.'
               break;
             case '09n':
             case '10n':
               this.weatherImg = 'imgs/lune_pluie.gif'
               this.weatherLogo = 'imgs/nuit.png';
-              body.addClass('nightrain');
+              this.body.addClass('nightrain');
               this.citation = 'Je suis menacé (que ne disent-ils pas ? ) d\'un rose vif, d\'une pluie continuelle ou d\'un faux pas sur mes bonds. Ils regardent mes yeux comme des vers luisants s\'il fait nuit ou bien ils font quelques pas en moi du côté de l\'ombre.'
               break;
             case '11n':
               this.weatherImg = 'imgs/lune_orage.gif';
               this.weatherLogo = 'imgs/nuit.png';
-              body.addClass('nightstorm');
+              this.body.addClass('nightstorm');
               this.citation = 'Il faut bien accepter ce qui nous transfigure. Tout orage a son temps toute haine s\'éteint.Le ciel toujours redevient pur. Toute nuit fait place au matin.'
               break;
             case '13n':
               this.weatherImg = 'imgs/lune_neige.gif';
               this.weatherLogo = 'imgs/nuit.png';
-              body.addClass('nightsnow');
+              this.body.addClass('nightsnow');
               this.citation ='De leur oeil inquiet ils regardent la neige,Attendant jusqu’au jour la nuit qui ne vient pas.'
               break;
             case '50n':
               this.weatherImg = 'imgs/lune_brume.gif';
               this.weatherLogo = 'imgs/nuit.gif';
               this.citation='Cité-dortoir, cité poubelle, Nuit et brouillard, lumières artificielles, Dans nos intérieurs d\'infinie solitude, On rêve d\'ailleurs sous d\'autres latitudes.'
-              body.addClass('nightfog');
+              this.body.addClass('nightfog');
               break;
             default:
               this.weatherImg = 'imgs/logo.png';

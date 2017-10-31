@@ -33,7 +33,7 @@
       
         <div class="cams col-lg-4 col-xs-8" ng-repeat="webcam in $ctrl.webcams">
           <a name="lkr-timelapse-player" data-id="{{webcam.id}}" data-play="day" href="https://lookr.com/{{webcam.id}}" target="_blank">
-            <img ng-src="{{webcam.image.current.preview}}" alt="webcam">
+            <img class="thumbnail" ng-src="{{webcam.image.current.preview}}" alt="webcam">
             <h4>{{webcam.title}}</h4>
           </a>
           <a name="lkr-timelapse-player"
