@@ -7,10 +7,6 @@
 
 }
 
-body {
-  width: 100%;
-  background-image: url(../imgs/geometricbg.jpg)
-}
 
 .footer-bottom {
   padding: 15px 0;
@@ -46,12 +42,23 @@ body {
 
 body {
   text-align: center;
+<<<<<<< HEAD
   color: cadetblue;
 }
 
 a {
   text-decoration: none;
   color: cyan;
+=======
+  width: 100%;
+  background-image: url(../imgs/geometricbg.jpg);
+  color:#597A9B;
+  font-size: 2em;
+  font-weight: 800;
+  -webkit-text-stroke: 1px black;
+  color: #D8D4CE;
+
+>>>>>>> 12637064559d0294ddce9325d260089b14165244
 }
 
 .red {
@@ -59,11 +66,16 @@ a {
 }
 
 .blue {
+<<<<<<< HEAD
   color: darkblue;
 }
 
 .green {
   color: greenyellow;
+=======
+
+  color: blue;
+>>>>>>> 12637064559d0294ddce9325d260089b14165244
 }
 
 .logo {
@@ -119,9 +131,7 @@ input {
 }
 
 .fog{
-  width: auto;
-  height: auto;
-  background-image: url(../imgs/fog.jpg)
+  background-image: url(../imgs/fog.jpg);
 }
 
 .night{
@@ -138,25 +148,25 @@ input {
 .nightrain{
   width: auto;
   height: auto;
-  background-image: url(../imgs/nigth-rain.jpg)
+  background-image: url(../imgs/night-rain.jpg)
 }
 
 .nightstorm{
   width: auto;
   height: auto;
-  background-image: url(../imgs/nigth-storm.jpg)
+  background-image: url(../imgs/night-storm.jpg)
 }
 
 .nightsnow{
   width: auto;
   height: auto;
-  background-image: url(../imgs/nigth-snow.jpg)
+  background-image: url(../imgs/night-snow.jpg)
 }
 
 .nightfog{
   width: auto;
   height: auto;
-  background-image: url(../imgs/nigth-fog.jpg)
+  background-image: url(../imgs/night-fog.jpg)
 }
 
 @media screen and (max-width: 750px){
