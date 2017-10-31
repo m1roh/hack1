@@ -1,0 +1,25 @@
+body {
+  background-image: url(../imgs/fondbleu.jpg);
+  width: 100%;
+}
+
+.footer-bottom {
+  padding: 15px 0;
+  font-size: 11px;
+  color: #777;
+}
+
+.navbar .navbar-nav {
+  display: inline-block;
+  float: none;
+  vertical-align: top;
+}
+
+.navbar .navbar-collapse {
+  text-align: center;
+}
+
+.logo {
+  width: 30px;
+  height: 30px;
+}

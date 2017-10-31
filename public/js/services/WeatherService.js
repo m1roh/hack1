@@ -10,7 +10,7 @@ angular.module('app')
 
     this.getWeather = (city) => {
       var defer = $q.defer();
-      $http.get(API_URL + `${city},FR&units=metric&lang=fr&appid=${key}`).then((response) => {
+      $http.get(API_URL + `${city}&units=metric&lang=fr&appid=${key}`).then((response) => {
         defer.resolve(response.data);
       }).catch((error) => {
         defer.reject(error.statusText);
