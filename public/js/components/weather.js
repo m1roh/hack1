@@ -37,6 +37,9 @@ angular.module('app')
         WeatherService.getWeather(city).then((weather) => {
           let weatherImg;
           let weatherLogo;
+          let classes = `'sunnybg', 'nuagesol', 'nuage', 'rain', 'orageeclaire', 'neige', 'fog', 'nigth', 'nigthcloud', 'nightrain', 'nightstorm', 'nightsnow', 'nightfog'`;
+          
+          body.removeClass(classes);
 
           switch (weather.weather[0].icon) {
             case '01d':
@@ -84,6 +87,7 @@ angular.module('app')
               break;
             case '02n':
             case '03n':
+            case '04n':
               this.weatherImg = 'imgs/lune_nuages.gif';
               this.weatherLogo = 'imgs/nuit.png';
               body.addClass('nigthcloud');
